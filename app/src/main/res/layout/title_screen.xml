@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="23"
+        android:text="Hidden History"
+        android:textAlignment="center"
+        android:textSize="80sp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="22"
+        android:layout_gravity="fill_horizontal"
+        android:text="New/Continue"
+        android:textSize="40sp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="22"
+        android:layout_gravity="fill_horizontal"
+        android:text="Past Games"
+        android:textSize="40sp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="10"
+        android:layout_gravity="fill_horizontal"
+        android:text="Settings"
+        android:textSize="40sp"/>
+
+</LinearLayout>
