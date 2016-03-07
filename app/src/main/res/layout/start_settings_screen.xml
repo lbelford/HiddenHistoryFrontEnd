@@ -118,6 +118,7 @@
         android:textAlignment="center"
         android:layout_gravity="center"
         android:text = "GO!"
-        android:textSize="40sp"/>
+        android:textSize="40sp"
+        android:onClick="chooseCategory"/>
 
 </LinearLayout>

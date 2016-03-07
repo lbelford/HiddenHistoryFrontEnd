@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+    <TextView android:id="@+id/title_block"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="23"
@@ -14,21 +14,22 @@
         android:textColor="#7BAFD4"
         />
 
-    <Button
+    <Button android:id="@+id/start_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="22"
         android:layout_gravity="fill_horizontal"
         android:text="New/Continue"
-        android:textSize="40sp"/>
-    <Button
+        android:textSize="40sp"
+        android:onClick="goSettings"/>
+    <Button android:id="@+id/archive_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="22"
         android:layout_gravity="fill_horizontal"
         android:text="Past Games"
         android:textSize="40sp"/>
-    <Button
+    <Button android:id="@+id/settings_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="10"
