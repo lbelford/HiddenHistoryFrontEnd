@@ -12,10 +12,13 @@
 
     android:background="@color/UNC">
 
-    <Space
+    <TextView android:id = "@+id/login_progress"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"/>
+        android:layout_weight="5"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:text="Please enter your email and password to log in."/>
 
 
     <EditText android:id="@+id/email_address"

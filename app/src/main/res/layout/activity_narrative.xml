@@ -45,18 +45,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <Button
+            <Button android:id="@+id/next_location_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:textAllCaps="false"
-                android:text="Let's scout on ahead" />
-            <Button
+                android:text="Next Location" />
+            <Button android:id="@+id/abort_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:textAllCaps="false"
-                android:text="I want to explore here"/>
+                android:text="End Adventure"/>
         </LinearLayout>
     </LinearLayout>
 

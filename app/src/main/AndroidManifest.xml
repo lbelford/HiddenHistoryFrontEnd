@@ -29,9 +29,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".TitleActivity">
-
-        </activity>
+        <activity android:name=".TitleActivity" />
         <activity android:name=".StartSettingsActivity" />
         <activity android:name=".ChooseCategoryActivity" />
         <activity
@@ -50,6 +48,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".AdventureDisplayActivity" />
+        <activity android:name=".API_TestActivity" />
+        <activity android:name=".EndAdventureActivity"></activity>
     </application>
 
 </manifest>

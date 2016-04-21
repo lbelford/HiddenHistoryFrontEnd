@@ -10,13 +10,14 @@ public class ChooseCategoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Bundle extras = getIntent().getExtras();
         setContentView(R.layout.category_choice);
     }
 
     public void goAdventure(View view) {
-        Intent intent = new Intent(this, Narrative.class);
+        Intent intent = new Intent(this, AdventureDisplayActivity.class);
+        intent.putExtras(getIntent().getExtras());
         startActivity(intent);
     }
 
-    //Change for git
 }
