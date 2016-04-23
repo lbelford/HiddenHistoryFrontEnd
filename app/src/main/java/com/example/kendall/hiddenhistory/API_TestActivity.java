@@ -96,8 +96,8 @@ public class API_TestActivity extends AppCompatActivity {
 
     protected void startNext()
     {
-        Adventure ad = caller.startNext(email, token, 1);
-        output.setText(ad.toString());
+        String stuff = caller.startNext(token);
+        output.setText(stuff);
     }
 
     protected void findLocation()

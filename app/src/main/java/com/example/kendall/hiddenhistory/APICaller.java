@@ -123,15 +123,15 @@ public class APICaller {
         return myAdventure;
     }
 
-    public Adventure startNext(String email, String token, int choice)
+    public String startNext(String token)
     {
         AdventureResultListener listener = new AdventureResultListener();
-        Adventure myAdventure = null;
+        String stuff = null;
 
-        String params = "email=" + email + "&choice=" + choice;
+        //String params = "email=" + email + "&choice=" + choice;
 
         try {
-            myAdventure = new StartNextTask(listener).execute(email, token, params).get();
+            stuff = new StartNextTask(listener).execute(token).get();
         }
         catch(InterruptedException e)
         {
@@ -141,7 +141,7 @@ public class APICaller {
         {
             Log.d("Concurrent Execution", e.getMessage());
         }
-        return myAdventure;
+        return stuff;
     }
 
     public String findLocation(String token){
@@ -293,7 +293,7 @@ public class APICaller {
         }
     }
 
-    private class StartNextTask extends AsyncTask<String, Adventure, Adventure>{
+    private class StartNextTask extends AsyncTask<String, String, String>{
 
         public AdventureResponse delegate = null;
 
@@ -303,13 +303,10 @@ public class APICaller {
         }
 
         @Override
-        protected Adventure doInBackground(String... params) {
+        protected String doInBackground(String... params) {
             try{
-                String json = client.doAuthorizedPost(apiPath + "startnext/", params[0], params[1]);
-                Log.d("StartNext JSON Check", json);
-                JSONObject jObj = processJSON(json);
-                Adventure ad = Adventure.loadAdventure(jObj);
-                return ad;
+                String json = client.doAuthorizedPost(apiPath + "startnext/", params[0], "");
+                return json;
             }
             catch (Exception e) {
                 System.out.println("IO Exception: " + e.getMessage());

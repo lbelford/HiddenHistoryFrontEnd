@@ -15,6 +15,7 @@ public class ChooseCategoryActivity extends AppCompatActivity {
     }
 
     public void goAdventure(View view) {
+        new APICaller().startNext(getIntent().getExtras().getString("token"));
         Intent intent = new Intent(this, AdventureDisplayActivity.class);
         intent.putExtras(getIntent().getExtras());
         startActivity(intent);
