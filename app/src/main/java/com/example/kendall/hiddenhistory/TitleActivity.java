@@ -29,7 +29,7 @@ public class TitleActivity extends AppCompatActivity {
 
         Button testButton = (Button) findViewById(R.id.settings_button);
 
-        testButton.setText("Test");
+        //testButton.setText("Test");
         testButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,12 +54,23 @@ public class TitleActivity extends AppCompatActivity {
         else
         {
             startButton.setText("Continue");
-            startButton.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    goAdventureDisplay(v);
-                }
-            });
+            if(myAdventure.getActive()) {
+                startButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        goAdventureDisplay(v);
+                    }
+                });
+            }
+            else
+            {
+                startButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        goNarrative(v);
+                    }
+                });
+            }
         }
     }
 
@@ -75,6 +86,17 @@ public class TitleActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AdventureDisplayActivity.class);
         intent.putExtra("email", this.email);
         intent.putExtra("token", this.token);
+        startActivity(intent);
+    }
+
+    public void goNarrative(View view)
+    {
+        Intent intent = new Intent(this, Narrative.class);
+        intent.putExtra("email", this.email);
+        intent.putExtra("token", this.token);
+        intent.putExtra("description", this.myAdventure.getDescription());
+        intent.putExtra("location", this.myAdventure.getDescription());
+        intent.putExtra("find_info", new APICaller().findLocation(this.token));
         startActivity(intent);
     }
 

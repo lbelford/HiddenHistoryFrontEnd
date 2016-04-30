@@ -61,4 +61,14 @@ public class Location {
     {
         return this.description;
     }
+
+    public double getLatitude()
+    {
+        return latitude;
+    }
+
+    public double getLongitude()
+    {
+        return longitude;
+    }
 }

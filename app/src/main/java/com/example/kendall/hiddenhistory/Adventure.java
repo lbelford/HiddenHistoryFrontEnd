@@ -14,6 +14,9 @@ public class Adventure {
     private int minDistance;
     private int maxDistance;
     private int score;
+    private boolean active;
+    private boolean isOver;
+    private String story;
 
     private Adventure()
     {
@@ -33,6 +36,10 @@ public class Adventure {
             a.minDistance = jAdventure.getInt("min_distance");
             a.maxDistance = jAdventure.getInt("max_distance");
             a.score = jAdventure.getInt("score");
+            a.active = jAdventure.getBoolean("active");
+            a.isOver = jAdventure.getBoolean("isOver");
+            JSONObject storyObject = new JSONObject(jAdventure.getString("currentStory"));
+            a.story = storyObject.getString("body");
         } catch(JSONException e)
         {
             Log.e("AdventureExceptions", e.getMessage());
@@ -63,5 +70,23 @@ public class Adventure {
     public String getLocationName()
     {
         return this.currentLocation.getName();
+    }
+
+    public boolean getActive()
+    {
+        return this.active;
+    }
+
+    public boolean isOver()
+    {
+        return this.isOver;
+    }
+
+    public String getStory() {
+        return this.story;
+    }
+
+    public Location getLocation () {
+        return this.currentLocation;
     }
 }

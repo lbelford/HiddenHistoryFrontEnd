@@ -31,13 +31,18 @@
 
         android:hint="@string/email_address"
 
+        android:text="admin@admin.com"
+        android:textSize="20dp"
+
         />
 
     <EditText android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:hint="Password"/>
+        android:hint="Password"
+        android:textSize="20dp"
+        android:text="admin"/>
 
     <Button
 
@@ -48,6 +53,7 @@
         android:onClick="login"
 
         android:text="Log In"
+        android:textSize="20dp"
 
         android:layout_weight="1"/>
 

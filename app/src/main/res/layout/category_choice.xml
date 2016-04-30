@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?android:attr/selectableItemBackground"
-        android:text="Architecture"
+        android:text="Choice 1"
         android:textSize="35dp"
         android:onClick="goAdventure"/>
     </LinearLayout>
@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="?android:attr/selectableItemBackground"
-            android:text="History"
+            android:text="Choice 2"
             android:textSize="35dp"
             android:onClick="goAdventure"/>
     </LinearLayout>
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="?android:attr/selectableItemBackground"
-            android:text="Local Life"
+            android:text="Choice 3"
             android:textSize="35dp"
             android:onClick="goAdventure"/>
     </LinearLayout>

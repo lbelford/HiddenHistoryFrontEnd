@@ -7,7 +7,17 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
+
+    <permission
+        android:name="com.example.kendall.hiddenhistory.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.kendall.hiddenhistory.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -42,15 +52,22 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Narrative" />
         <activity android:name=".LoginActivity">
+
+        </activity>
+        <activity android:name=".AdventureDisplayActivity">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        </activity>
+        <activity android:name=".API_TestActivity" />
+        <activity android:name=".EndAdventureActivity" />
+        <activity android:name=".IntroductionActivity" />
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AdventureDisplayActivity" />
-        <activity android:name=".API_TestActivity" />
-        <activity android:name=".EndAdventureActivity"></activity>
     </application>
 
 </manifest>

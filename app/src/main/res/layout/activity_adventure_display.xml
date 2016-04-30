@@ -13,13 +13,25 @@
     <TextView android:id="@+id/adventure_display"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="15"
+        android:layout_weight="60"
+        android:textSize="30dp"
         />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.kendall.hiddenhistory.AdventureDisplayActivity"
+        tools:layout="@layout/mr_media_route_list_item"
+        android:layout_weight="12"/>
 
     <Button android:id="@+id/find_location_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="5"
+        android:layout_weight="1"
         android:text="Find Location"/>
 
 </LinearLayout>

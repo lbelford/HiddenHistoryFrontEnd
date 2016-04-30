@@ -39,6 +39,7 @@ public class EndAdventureActivity extends AppCompatActivity {
     protected void returnToTitle()
     {
         Intent intent = new Intent(this, TitleActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.putExtra("email", email);
         intent.putExtra("token", token);
         startActivity(intent);
